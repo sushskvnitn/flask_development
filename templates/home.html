@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLASK TUTORIAL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #e4e4e4;
             font-family: Arial, sans-serif;
         }
 
         .page-header {
-            padding: 20px;
-            background-color: #343a40;
-            color: white;
-            margin-bottom: 30px;
+            color: black;
         }
 
         .banner-img {
@@ -26,8 +24,7 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 90%
         }
 
         h2 {
@@ -35,10 +32,6 @@
             margin-bottom: 30px;
         }
 
-        h3 {
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
 
         p {
             margin-bottom: 20px;
@@ -91,16 +84,33 @@
     </style>
 </head>
 <body>
-    <h1 class="page-header">
-        {{compony}} Carriers
-    </h1>
+    {% include 'navbar.html' %}
+  
     <div class="container">
-        <h2>Welcome to the  <b>SUSHANT Carriers</b> </h2>
-        <img src="../static/banner.png" class="banner-img img-fluid " alt="Banner">
+        <h2>hello world!</h2>
+         <img src="../static/banner.png" class="banner-img img-fluid " alt="Banner">
+       <h2 class="">Welcome to the  <b>SUSHANT Carriers</b> </h2>
+      <div class="text-center " > <p class="text-muted ">
+            we provide a simple high-level interface for creating fast and reliable web applications. It is designed to make getting started quick and easy, with the ability to scale up to complex applications. It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
+       </p></div>
         <h3>About us</h3>
-        <p>
+        <div class="container">
+            <div class="row ">
+          
+              <div class="col-md-6">
+           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est repudiandae odit nihil accusantium perferendis quod soluta eligendi, molestias eaque ratione porro minima qui magni quisquam et quae. Neque inventore hic exercitationem eligendi porro consequuntur ullam ad, mollitia ipsam sunt, sequi illum voluptatem quod tempora minus aspernatur quis deleniti, veritatis iste. Corporis, itaque iusto. Rem velit sed, ipsa error voluptatibus cupiditate omnis iusto ipsum, laboriosam facilis eligendi vel pariatur, beatae odio aut consequatur! Sit, explicabo obcaecati! Hic, nostrum. Ullam deserunt sunt dicta libero.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ducimus quidem sequi earum dignissimos esse. Iusto commodi, veniam animi iste at deserunt repudiandae.
         </p>
+              </div>
+          
+              <div class="col-md-6">
+          <img src="../static/devs.avif" class="img-fluid" alt="fj" srcset="">
+              </div>
+          
+            </div>
+          </div>
+       
 
         <h3>Open positions</h3>
         <div>
@@ -131,6 +141,12 @@
             </form>
         </div>
     </div>
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2023 Sushant Carriers. All rights reserved.</span>
+        </div>
+    </footer>
+    
 </body>
 </html>
 

@@ -25,7 +25,7 @@ JOBS =[
 @app.route('/')
 def Hello():
     #returning the html page using render_template
-    return render_template('home.html', jobs=JOBS ,compony='SuShAnT' )
+    return render_template('home.html', jobs=JOBS ,compony='SushanT' )
 
 #api route to render the json data
 @app.route('/api/jobs')
