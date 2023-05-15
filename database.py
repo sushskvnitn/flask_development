@@ -23,4 +23,18 @@ def load_jobs_from_databases():
 
         return Jobs
 
+def load_job_from_databases(id):
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT * FROM jobs WHERE id = :val"), {"val":id})
+        Jobs = []
+        column_names = result.keys()  # Retrieve the column names
+
+        for row in result.fetchall():
+            row_dict = {column_name: row_value for column_name, row_value in zip(column_names, row)}
+            Jobs.append(row_dict)
+        if len(Jobs) == 0:
+            return None
+        return Jobs[0]
+
+
 
