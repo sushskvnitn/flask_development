@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Application Submitted</title>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        Jovian Careers
+      </h1>
+
+      <p>Your application for the role of <b>{{job['title']}}</b> at Sushant's has been submitted!</p>
+      
+      <b>Full Name</b>
+      <div class="mb-2">{{application['full_name']}}</div>
+  
+      <b>Email</b>
+      <div class="mb-2">{{application['email']}}</div>
+  
+      <b>LinkedIn URL</b>
+      <div class="mb-2">{{application['linkedin_url']}}</div>
+  
+      <b>Education</b>
+      <div class="mb-2">{{application['education']}}</div>
+  
+      <b>Work Experience</b>
+      <div class="mb-2">{{application['work_experience']}}</div>
+  
+      <b>Resume URL</b>
+      <div class="mb-2">{{application['resume_url']}}</div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2023 Sushant Carriers. All rights reserved.</span>
+        </div>
+    </footer>
+  </body>
+</html>

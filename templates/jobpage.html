@@ -87,7 +87,7 @@ body {
 <body>
     {% include 'navbar.html' %}
     <h1 class="page-header">Job Page</h1>
-    <div class="container">
+    <div class="container1">
         <div class="text-center">
            <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlYW13b3JrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="Job Image"  width="65%"class="img-fluid"> 
         </div>
@@ -97,8 +97,9 @@ body {
         <h3 class="job-salary"><b>salary:</b> <br> {{ job['salary'] }} {{job['currency']}}</h3>
         <h3 class="job-responsibilities "> <b>Responsibilities : </b>  {{ job['responsibilities'] }}</h3>
         <h3 class="job-requirements"><b>Requirements:</b>  {{ job['requirements'] }}</h3>
-    </div>
 
+    </div>
+{% include 'application_form.html' %}
     <footer class="footer mt-auto py-3 bg-dark text-light">
         <div class="container text-center">
             <span>&copy; 2023 Sushant Carriers. All rights reserved.</span>

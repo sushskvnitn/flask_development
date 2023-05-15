@@ -1,5 +1,5 @@
-from flask import Flask , render_template, jsonify
-from database import load_jobs_from_databases,load_job_from_databases
+from flask import Flask , render_template, jsonify,request
+from database import load_jobs_from_databases,load_job_from_databases,add_application
 app = Flask(__name__)
 #passing this jobs to the home.html using render_template
 # JOBS =[
@@ -44,6 +44,13 @@ def get_jobs():
 def show_jobs(id):
     job= load_job_from_databases(id)
     return render_template('jobpage.html',job=job,compony='SUSHANT')
+
+@app.route("/job/<id>/apply", methods=['post'])
+def apply_for_job(id):
+    data = request.form
+    job = load_job_from_databases(id)
+    add_application(id, data)
+    return render_template('applicationSubmitted.html', application=data, job=job, compony='SUSHANT')
 
 # writing below code to run the app
 if __name__ == '__main__':
