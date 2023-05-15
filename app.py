@@ -40,10 +40,10 @@ def get_jobs():
     return jsonify(jobs)
 
 # api route to render load job data dynamically using id
-@app.route('/api/jobs/<id>')
+@app.route('/job/<id>')
 def show_jobs(id):
     job= load_job_from_databases(id)
-    return jsonify(job)
+    return render_template('jobpage.html',job=job,compony='SUSHANT')
 
 # writing below code to run the app
 if __name__ == '__main__':

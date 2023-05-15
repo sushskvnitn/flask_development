@@ -1,10 +1,8 @@
-<div class="job-listing">
-
-               
+<div class="job-listing">        
     <div class="job-title">{{job['title']}}</div>
     <div class="job-description">Location: {{job['location']}}</div>
     <div class="job-salary">Salary : {{job['salary']}} {{job['currency']}} </div> 
-    <a class="btn btn-primary btn-small" href="mailto:tempomail.edu@gmail.com?subject=Application%20for%20 {{job['title']}}&body=Your%20Name%20%3A%20%3C%20your%20name%20%3E%0D%0AYour%20Resume%20link%20%3A%20%3Cyour%20resume%20link%20%3E%0D%0AYour%20Linkedin%20profile%20link%20%3A%20%3Cyour%20Linked%20in%20Profile%20link%20here%3E%0D%0A"> 
-        Apply
+    <a class="btn btn-primary btn-small" href="/job/{{job['id']}}"> 
+        Apply here
     </a>  
-</div>
+</div> 
